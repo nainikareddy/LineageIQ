@@ -1,0 +1,82 @@
+version: 2
+sources:
+- name: raw
+  database: warehouse
+  schema: raw
+  tables:
+  - name: orders
+    columns:
+    - name: order_id
+    - name: user_id
+    - name: amount
+    - name: refunds
+    - name: ordered_at
+    - name: status
+    - name: channel
+    - name: region
+    - name: currency
+    - name: coupon_code
+    - name: shipping_amount
+    - name: tax_amount
+    - name: payment_method
+  - name: users
+    columns:
+    - name: user_id
+    - name: created_at
+    - name: country
+    - name: acquisition_channel
+  - name: payments
+    columns:
+    - name: payment_id
+    - name: order_id
+    - name: amount
+    - name: payment_method
+    - name: paid_at
+  - name: refunds
+    columns:
+    - name: refund_id
+    - name: order_id
+    - name: refund_amount
+    - name: refunded_at
+  - name: events
+    columns:
+    - name: event_id
+    - name: user_id
+    - name: event_name
+    - name: event_at
+    - name: session_id
+  - name: products
+    columns:
+    - name: product_id
+    - name: product_name
+    - name: category
+    - name: unit_cost
+  - name: subscriptions
+    columns:
+    - name: subscription_id
+    - name: user_id
+    - name: plan_name
+    - name: status
+    - name: started_at
+    - name: ended_at
+  - name: support_tickets
+    columns:
+    - name: ticket_id
+    - name: user_id
+    - name: priority
+    - name: status
+    - name: opened_at
+    - name: resolved_at
+  - name: campaigns
+    columns:
+    - name: campaign_id
+    - name: campaign_name
+    - name: channel
+    - name: spend
+    - name: started_at
+  - name: legacy_orders
+    columns:
+    - name: legacy_order_id
+    - name: legacy_customer_id
+    - name: legacy_total
+    - name: imported_at

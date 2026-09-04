@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "seed": 424242,
+  "generated_as_of": "2026-07-25T12:00:00Z",
+  "dashboards": [
+    {
+      "id": "revenue_executive",
+      "title": "Executive Revenue",
+      "description": "Gross booked revenue for executive reporting.",
+      "tiles": [
+        {
+          "id": "rev_exec_total",
+          "title": "Total Revenue",
+          "metric_label": "Total Revenue",
+          "sql": "select sum(amount) as total_revenue from analytics.fct_orders"
+        },
+        {
+          "id": "rev_exec_trend",
+          "title": "Gross Revenue Trend",
+          "metric_label": "Gross Revenue Trend",
+          "sql": "select order_date, gross_revenue from analytics.mart_daily_sales order by 1"
+        }
+      ]
+    },
+    {
+      "id": "revenue_finance",
+      "title": "Finance Revenue",
+      "description": "Net recognized revenue after refunds.",
+      "tiles": [
+        {
+          "id": "rev_fin_total",
+          "title": "Total Revenue",
+          "metric_label": "Total Revenue",
+          "sql": "select sum(amount - refunds) as total_revenue from analytics.fct_orders"
+        },
+        {
+          "id": "rev_fin_trend",
+          "title": "Net Revenue Trend",
+          "metric_label": "Net Revenue Trend",
+          "sql": "select order_date, net_revenue from analytics.mart_daily_sales order by 1"
+        }
+      ]
+    },
+    {
+      "id": "weekly_ops",
+      "title": "Weekly Operations",
+      "description": "Legacy operations review dashboard.",
+      "tiles": [
+        {
+          "id": "ops_orders",
+          "title": "Weekly Orders",
+          "metric_label": "Weekly Orders",
+          "sql": "select date_trunc('week', ordered_at) as week, count(*) as orders from analytics.fct_orders group by 1"
+        },
+        {
+          "id": "ops_tickets",
+          "title": "Weekly Tickets",
+          "metric_label": "Weekly Tickets",
+          "sql": "select date_trunc('week', opened_date) as week, sum(opened_tickets) as tickets from analytics.mart_support_overview group by 1"
+        }
+      ]
+    },
+    {
+      "id": "sales_kpis",
+      "title": "Sales KPIs",
+      "description": "Canonical sales performance.",
+      "tiles": [
+        {
+          "id": "sales_total_revenue",
+          "title": "Net Revenue",
+          "metric_label": "Net Revenue",
+          "sql": "select sum(net_amount) as net_revenue from analytics.fct_orders"
+        },
+        {
+          "id": "sales_order_count",
+          "title": "Order Count",
+          "metric_label": "Order Count",
+          "sql": "select count(distinct order_id) as order_count from analytics.fct_orders"
+        },
+        {
+          "id": "sales_customer_count",
+          "title": "Customers",
+          "metric_label": "Customers",
+          "sql": "select count(distinct user_id) as customers from analytics.fct_orders"
+        },
+        {
+          "id": "sales_average_order",
+          "title": "Average Order Value",
+          "metric_label": "Average Order Value",
+          "sql": "select avg(amount) as average_order_value from analytics.fct_orders"
+        },
+        {
+          "id": "sales_channel_mix",
+          "title": "Revenue by Channel",
+          "metric_label": "Revenue by Channel",
+          "sql": "select channel, sum(net_amount) as revenue from analytics.fct_orders group by 1"
+        }
+      ]
+    },
+    {
+      "id": "sales_kpis_v2",
+      "title": "Sales KPIs v2",
+      "description": "Unapproved copy with a regional tile.",
+      "tiles": [
+        {
+          "id": "sales_v2_total_revenue",
+          "title": "Net Revenue",
+          "metric_label": "Net Revenue",
+          "sql": "select sum(net_amount) as net_revenue from analytics.fct_orders"
+        },
+        {
+          "id": "sales_v2_order_count",
+          "title": "Order Count",
+          "metric_label": "Order Count",
+          "sql": "select count(distinct order_id) as order_count from analytics.fct_orders"
+        },
+        {
+          "id": "sales_v2_customer_count",
+          "title": "Customers",
+          "metric_label": "Customers",
+          "sql": "select count(distinct user_id) as customers from analytics.fct_orders"
+        },
+        {
+          "id": "sales_v2_average_order",
+          "title": "Average Order Value",
+          "metric_label": "Average Order Value",
+          "sql": "select avg(amount) as average_order_value from analytics.fct_orders"
+        },
+        {
+          "id": "sales_v2_region",
+          "title": "Revenue by Region",
+          "metric_label": "Revenue by Region",
+          "sql": "select region, sum(net_amount) as revenue from analytics.fct_orders group by 1"
+        }
+      ]
+    },
+    {
+      "id": "marketing_overview",
+      "title": "Marketing Overview",
+      "description": "Campaign efficiency and channel mix.",
+      "tiles": [
+        {
+          "id": "mkt_channel_mix",
+          "title": "Revenue by Channel",
+          "metric_label": "Revenue by Channel",
+          "sql": "select channel, sum(net_amount) as revenue from analytics.fct_orders group by 1"
+        },
+        {
+          "id": "mkt_order_count",
+          "title": "Order Count",
+          "metric_label": "Order Count",
+          "sql": "select count(distinct order_id) as order_count from analytics.fct_orders"
+        },
+        {
+          "id": "mkt_spend",
+          "title": "Campaign Spend",
+          "metric_label": "Campaign Spend",
+          "sql": "select sum(spend) as campaign_spend from analytics.mart_campaign_roi"
+        },
+        {
+          "id": "mkt_roas",
+          "title": "Return on Ad Spend",
+          "metric_label": "Return on Ad Spend",
+          "sql": "select avg(return_on_ad_spend) as roas from analytics.mart_campaign_roi"
+        },
+        {
+          "id": "mkt_campaigns",
+          "title": "Campaign Count",
+          "metric_label": "Campaign Count",
+          "sql": "select count(distinct campaign_id) as campaigns from analytics.mart_campaign_roi"
+        }
+      ]
+    },
+    {
+      "id": "product_engagement",
+      "title": "Product Engagement",
+      "description": "Short-window engagement used by product.",
+      "tiles": [
+        {
+          "id": "product_active_users",
+          "title": "Active Users",
+          "metric_label": "Active Users",
+          "sql": "select active_users from analytics.mart_active_users_7d"
+        },
+        {
+          "id": "product_sessions",
+          "title": "Sessions",
+          "metric_label": "Sessions",
+          "sql": "select sessions_7d as sessions from analytics.mart_active_users_7d"
+        },
+        {
+          "id": "product_performance",
+          "title": "Product Performance",
+          "metric_label": "Product Performance",
+          "sql": "select product_name, order_count from analytics.mart_product_performance"
+        },
+        {
+          "id": "product_catalog",
+          "title": "Product Catalog Size",
+          "metric_label": "Product Catalog Size",
+          "sql": "select count(*) as products from analytics.dim_products"
+        }
+      ]
+    },
+    {
+      "id": "customer_health",
+      "title": "Customer Health",
+      "description": "Long-window engagement used by success.",
+      "tiles": [
+        {
+          "id": "health_active_users",
+          "title": "Active Users",
+          "metric_label": "Active Users",
+          "sql": "select active_users from analytics.mart_active_users_30d"
+        },
+        {
+          "id": "health_subscriptions",
+          "title": "Subscriptions",
+          "metric_label": "Subscriptions",
+          "sql": "select sum(subscriptions) as subscriptions from analytics.mart_subscription_health"
+        }
+      ]
+    },
+    {
+      "id": "user_privacy_audit",
+      "title": "User Privacy Audit",
+      "description": "Checks hashed user identifiers.",
+      "tiles": [
+        {
+          "id": "privacy_email_hash",
+          "title": "Hashed Emails",
+          "metric_label": "Hashed Emails",
+          "sql": "select users.email_hash from analytics.dim_users as users"
+        }
+      ]
+    },
+    {
+      "id": "executive_orders",
+      "title": "Executive Orders",
+      "description": "Executive order volume and gross revenue.",
+      "tiles": [
+        {
+          "id": "exec_order_count",
+          "title": "Order Count",
+          "metric_label": "Order Count",
+          "sql": "select count(distinct order_id) as order_count from analytics.fct_orders"
+        },
+        {
+          "id": "exec_gross_revenue",
+          "title": "Gross Revenue",
+          "metric_label": "Gross Revenue",
+          "sql": "select sum(amount) as gross_revenue from analytics.fct_orders"
+        }
+      ]
+    },
+    {
+      "id": "finance_orders",
+      "title": "Finance Orders",
+      "description": "Finance order volume and net revenue.",
+      "tiles": [
+        {
+          "id": "fin_order_count",
+          "title": "Order Count",
+          "metric_label": "Order Count",
+          "sql": "select count(distinct order_id) as order_count from analytics.fct_orders"
+        },
+        {
+          "id": "fin_net_revenue",
+          "title": "Net Revenue",
+          "metric_label": "Net Revenue",
+          "sql": "select sum(amount - refunds) as net_revenue from analytics.fct_orders"
+        }
+      ]
+    },
+    {
+      "id": "monthly_board",
+      "title": "Monthly Subscription Board",
+      "description": "Low-frequency but current board reporting.",
+      "tiles": [
+        {
+          "id": "monthly_subscriptions",
+          "title": "Subscriptions by Plan",
+          "metric_label": "Subscriptions by Plan",
+          "sql": "select plan_name, sum(subscriptions) as subscriptions from analytics.mart_subscription_health group by 1"
+        }
+      ]
+    }
+  ]
+}

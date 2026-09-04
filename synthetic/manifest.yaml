@@ -1,0 +1,136 @@
+schema_version: 1
+dataset_id: lineageiq_synthetic_v1
+seed: 424242
+as_of: '2026-07-25T12:00:00Z'
+defects:
+- id: D1
+  expected: positive
+  type: metric_definition_conflict
+  description: Tiles labeled "Total Revenue" use gross and net formulas.
+  locations:
+  - path: synthetic/dashboards.json
+    locator: dashboard=revenue_executive/tile=rev_exec_total
+    expression: sum(amount)
+  - path: synthetic/dashboards.json
+    locator: dashboard=revenue_finance/tile=rev_fin_total
+    expression: sum(amount - refunds)
+- id: D2
+  expected: positive
+  type: orphaned_model
+  description: A staging model has no downstream model or dashboard reference.
+  locations:
+  - path: synthetic/dbt_project/models/staging/stg_legacy_orders.sql
+    locator: model=stg_legacy_orders
+- id: D3
+  expected: positive
+  type: stale_asset
+  description: weekly_ops has no query-log activity in the last 120 days.
+  locations:
+  - path: synthetic/query_logs/query_logs.parquet
+    locator: dashboard_id=weekly_ops/max(timestamp)=2026-03-21T12:00:00Z
+  - path: synthetic/dashboards.json
+    locator: dashboard=weekly_ops
+- id: D4
+  expected: positive
+  type: duplicate_dashboard
+  description: sales_kpis and sales_kpis_v2 share four of five tile definitions.
+  locations:
+  - path: synthetic/dashboards.json
+    locator: dashboard=sales_kpis
+  - path: synthetic/dashboards.json
+    locator: dashboard=sales_kpis_v2
+  shared_tile_ratio: 0.8
+- id: D5
+  expected: positive
+  type: broken_lineage
+  description: A tile traces to users.email_hash, absent from raw source metadata.
+  locations:
+  - path: synthetic/dashboards.json
+    locator: dashboard=user_privacy_audit/tile=privacy_email_hash
+    column: users.email_hash
+  - path: synthetic/dbt_project/models/marts/dim_users.sql
+    locator: column=email_hash
+  - path: synthetic/dbt_project/models/staging/stg_users.sql
+    locator: source=raw.users/column=email_hash
+  - path: synthetic/dbt_project/models/staging/sources.yml
+    locator: source=raw.users/columns (email_hash absent)
+- id: D6
+  expected: positive
+  type: metric_definition_conflict
+  description: active_users has incompatible 7-day and 30-day windows.
+  locations:
+  - path: synthetic/dbt_project/models/marts/mart_active_users_7d.sql
+    locator: column=active_users/window=7 days
+  - path: synthetic/dbt_project/models/marts/mart_active_users_30d.sql
+    locator: column=active_users/window=30 days
+  - path: synthetic/dashboards.json
+    locator: dashboard=product_engagement/tile=product_active_users
+  - path: synthetic/dashboards.json
+    locator: dashboard=customer_health/tile=health_active_users
+- id: D7
+  expected: positive
+  type: unused_column_propagation
+  description: select * propagates 12 columns that its only consumer never uses.
+  locations:
+  - path: synthetic/dbt_project/models/intermediate/int_order_wide.sql
+    locator: select=*
+  - path: synthetic/dbt_project/models/marts/mart_daily_sales.sql
+    locator: ref=int_order_wide/used_column=order_id
+  unused_columns:
+  - user_id
+  - amount
+  - refunds
+  - ordered_at
+  - status
+  - channel
+  - region
+  - currency
+  - coupon_code
+  - shipping_amount
+  - tax_amount
+  - payment_method
+negatives:
+- id: N1
+  expected: negative
+  type: duplicate_dashboard
+  description: Marketing and sales share two tiles but serve distinct purposes.
+  locations:
+  - path: synthetic/dashboards.json
+    locator: dashboard=marketing_overview
+  - path: synthetic/dashboards.json
+    locator: dashboard=sales_kpis
+  shared_tile_ratio: 0.4
+- id: N2
+  expected: negative
+  type: stale_asset
+  description: monthly_board is low-frequency but was queried 20 days ago.
+  locations:
+  - path: synthetic/query_logs/query_logs.parquet
+    locator: dashboard_id=monthly_board/max(timestamp)=2026-07-05T12:00:00Z
+- id: N3
+  expected: negative
+  type: orphaned_model
+  description: mart_subscription_health is low-use but feeds monthly_board.
+  locations:
+  - path: synthetic/dbt_project/models/marts/mart_subscription_health.sql
+    locator: model=mart_subscription_health
+  - path: synthetic/dashboards.json
+    locator: dashboard=monthly_board/tile=monthly_subscriptions
+- id: N4
+  expected: negative
+  type: metric_definition_conflict
+  description: Two "Order Count" tiles use byte-identical SQL.
+  locations:
+  - path: synthetic/dashboards.json
+    locator: dashboard=executive_orders/tile=exec_order_count
+  - path: synthetic/dashboards.json
+    locator: dashboard=finance_orders/tile=fin_order_count
+- id: N5
+  expected: negative
+  type: metric_definition_conflict
+  description: Gross Revenue and Net Revenue are intentionally distinct labels.
+  locations:
+  - path: synthetic/dashboards.json
+    locator: dashboard=executive_orders/tile=exec_gross_revenue
+  - path: synthetic/dashboards.json
+    locator: dashboard=finance_orders/tile=fin_net_revenue

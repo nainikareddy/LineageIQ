@@ -1,0 +1,14 @@
+name: lineageiq_synthetic
+version: 1.0.0
+config-version: 2
+profile: lineageiq_synthetic
+model-paths:
+- models
+models:
+  lineageiq_synthetic:
+    staging:
+      materialized: view
+    intermediate:
+      materialized: ephemeral
+    marts:
+      materialized: table

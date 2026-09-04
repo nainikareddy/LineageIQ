@@ -1,0 +1,1245 @@
+{
+  "edges": [
+    {
+      "kind": "tile_dependency",
+      "source": "model.dim_products",
+      "target": "tile.product_engagement.product_catalog"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.dim_users",
+      "target": "tile.user_privacy_audit.privacy_email_hash"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.executive_orders.exec_gross_revenue"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.executive_orders.exec_order_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.finance_orders.fin_net_revenue"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.finance_orders.fin_order_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.marketing_overview.mkt_channel_mix"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.marketing_overview.mkt_order_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.revenue_executive.rev_exec_total"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.revenue_finance.rev_fin_total"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis.sales_average_order"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis.sales_channel_mix"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis.sales_customer_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis.sales_order_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis.sales_total_revenue"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis_v2.sales_v2_average_order"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis_v2.sales_v2_customer_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis_v2.sales_v2_order_count"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis_v2.sales_v2_region"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.sales_kpis_v2.sales_v2_total_revenue"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.fct_orders",
+      "target": "tile.weekly_ops.ops_orders"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_campaign_attribution",
+      "target": "model.mart_campaign_roi"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_daily_sales",
+      "target": "model.mart_daily_sales"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_event_sessions",
+      "target": "model.mart_active_users_7d"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_order_financials",
+      "target": "model.fct_orders"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_order_wide",
+      "target": "model.mart_daily_sales"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_product_sales",
+      "target": "model.mart_product_performance"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_subscription_status",
+      "target": "model.mart_subscription_health"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_support_metrics",
+      "target": "model.mart_support_overview"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_user_activity",
+      "target": "model.mart_active_users_30d"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_user_activity",
+      "target": "model.mart_active_users_7d"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.int_user_orders",
+      "target": "model.mart_daily_sales"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_active_users_30d",
+      "target": "tile.customer_health.health_active_users"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_active_users_7d",
+      "target": "tile.product_engagement.product_active_users"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_active_users_7d",
+      "target": "tile.product_engagement.product_sessions"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_campaign_roi",
+      "target": "tile.marketing_overview.mkt_campaigns"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_campaign_roi",
+      "target": "tile.marketing_overview.mkt_roas"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_campaign_roi",
+      "target": "tile.marketing_overview.mkt_spend"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_daily_sales",
+      "target": "tile.revenue_executive.rev_exec_trend"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_daily_sales",
+      "target": "tile.revenue_finance.rev_fin_trend"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_product_performance",
+      "target": "tile.product_engagement.product_performance"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_subscription_health",
+      "target": "tile.customer_health.health_subscriptions"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_subscription_health",
+      "target": "tile.monthly_board.monthly_subscriptions"
+    },
+    {
+      "kind": "tile_dependency",
+      "source": "model.mart_support_overview",
+      "target": "tile.weekly_ops.ops_tickets"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_campaigns",
+      "target": "model.int_campaign_attribution"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_events",
+      "target": "model.int_event_sessions"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_events",
+      "target": "model.int_user_activity"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_orders",
+      "target": "model.int_campaign_attribution"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_orders",
+      "target": "model.int_daily_sales"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_orders",
+      "target": "model.int_order_financials"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_orders",
+      "target": "model.int_order_wide"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_orders",
+      "target": "model.int_product_sales"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_orders",
+      "target": "model.int_user_orders"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_payments",
+      "target": "model.int_order_financials"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_products",
+      "target": "model.dim_products"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_products",
+      "target": "model.int_product_sales"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_refunds",
+      "target": "model.int_order_financials"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_subscriptions",
+      "target": "model.int_subscription_status"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_support_tickets",
+      "target": "model.int_support_metrics"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_users",
+      "target": "model.dim_users"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_users",
+      "target": "model.int_subscription_status"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_users",
+      "target": "model.int_support_metrics"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "model.stg_users",
+      "target": "model.int_user_orders"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.campaigns",
+      "target": "model.stg_campaigns"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.events",
+      "target": "model.stg_events"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.legacy_orders",
+      "target": "model.stg_legacy_orders"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.orders",
+      "target": "model.stg_orders"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.payments",
+      "target": "model.stg_payments"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.products",
+      "target": "model.stg_products"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.refunds",
+      "target": "model.stg_refunds"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.subscriptions",
+      "target": "model.stg_subscriptions"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.support_tickets",
+      "target": "model.stg_support_tickets"
+    },
+    {
+      "kind": "model_dependency",
+      "source": "source.raw.users",
+      "target": "model.stg_users"
+    }
+  ],
+  "findings": [
+    {
+      "asset_ids": [
+        "model.stg_users",
+        "tile.user_privacy_audit.privacy_email_hash"
+      ],
+      "confidence": 1.0,
+      "defect_type": "broken_lineage",
+      "detector": "deterministic",
+      "evidence": [
+        {
+          "content_hash": "f1f58b1d4aa012ba828eaf9c413e56b5698ea668f4acf5ecfad3148f0c99279b",
+          "excerpt": "select\n    user_id,\n    email_hash,\n    created_at,\n    country,\n    acquisition_channel\nfrom {{ source('raw', 'users') }}",
+          "locator": "model=stg_users",
+          "source": "dbt_sql",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dbt_project/models/staging/stg_users.sql"
+        },
+        {
+          "content_hash": "f52631c3e1196c8598dca0c4752e493e6ac2dfe03deeef1a821549a1659ed160",
+          "excerpt": null,
+          "locator": "source=raw.users",
+          "source": "dbt_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dbt_project/models/staging/sources.yml"
+        },
+        {
+          "content_hash": "9590af1cade38c886eceeb22340695a55267c0488b5cb3195bd0f14b4d258f70",
+          "excerpt": "select users.email_hash from analytics.dim_users as users",
+          "locator": "dashboard=user_privacy_audit/tile=privacy_email_hash",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        }
+      ],
+      "id": "broken_lineage:model.stg_users.email_hash",
+      "summary": "Column 'email_hash' is missing from upstream relation 'warehouse.raw.users'."
+    },
+    {
+      "asset_ids": [
+        "dashboard.sales_kpis",
+        "dashboard.sales_kpis_v2"
+      ],
+      "confidence": 0.8,
+      "defect_type": "duplicate_dashboard",
+      "detector": "deterministic",
+      "evidence": [
+        {
+          "content_hash": "5c91f8396626fd5a5dd258bc7572444d50b8d131c3c7d1693f14d6b3125773d1",
+          "excerpt": null,
+          "locator": "dashboard=sales_kpis",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        },
+        {
+          "content_hash": "762adf1ba060a41e120f5fd5bf26cab3026d2f07b297e16602a4d6dc3872d6db",
+          "excerpt": null,
+          "locator": "dashboard=sales_kpis_v2",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        }
+      ],
+      "id": "duplicate_dashboard:sales_kpis:sales_kpis_v2",
+      "summary": "Dashboards sales_kpis and sales_kpis_v2 share 80% of tile definitions."
+    },
+    {
+      "asset_ids": [
+        "model.mart_active_users_30d",
+        "model.mart_active_users_7d",
+        "tile.customer_health.health_active_users",
+        "tile.product_engagement.product_active_users"
+      ],
+      "confidence": 1.0,
+      "defect_type": "metric_definition_conflict",
+      "detector": "semantic_llm",
+      "evidence": [
+        {
+          "content_hash": "3e3700de1b1795603dddc42a754e38c0305ea2ab4840dfb72e68bc7b27e72cb9",
+          "excerpt": "-- Deliberate D6: 30-day definition.\nselect count(distinct user_id) as active_users\nfrom {{ ref('int_user_activity') }}\nwhere activity_date >= current_date - interval '30 days'",
+          "locator": "model=mart_active_users_30d",
+          "source": "dbt_sql",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dbt_project/models/marts/mart_active_users_30d.sql"
+        },
+        {
+          "content_hash": "e4ce59688bcac6958864ac7c10d07f5dab42cac6d51b81164873b2e8108407d2",
+          "excerpt": "-- Deliberate D6: 7-day definition.\nwith activity as (\n    select count(distinct user_id) as active_users\n    from {{ ref('int_user_activity') }}\n    where activity_date >= current_date - interval '7 days'\n),\nsessions as (\n    select count(*) as sessions_7d\n    from {{ ref('int_event_sessions') }}\n    where session_started_at >= current_date - interval '7 days'\n)\nselect activity.active_users, sessions.sessions_7d\nfrom activity cross join sessions",
+          "locator": "model=mart_active_users_7d",
+          "source": "dbt_sql",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dbt_project/models/marts/mart_active_users_7d.sql"
+        },
+        {
+          "content_hash": null,
+          "excerpt": "-- Deliberate D6: 30-day definition.\nselect count(distinct user_id) as active_users\nfrom analytics.int_user_activity\nwhere activity_date >= current_date - interval '30 days'",
+          "locator": "candidate=column:active_users:mart_active_users_30d:mart_active_users_7d/side=left",
+          "source": "dbt_sql",
+          "uri": "semantic://column:active_users:mart_active_users_30d:mart_active_users_7d/left"
+        },
+        {
+          "content_hash": null,
+          "excerpt": "-- Deliberate D6: 7-day definition.\nwith activity as (\n    select count(distinct user_id) as active_users\n    from analytics.int_user_activity\n    where activity_date >= current_date - interval '7 days'\n),\nsessions as (\n    select count(*) as sessions_7d\n    from analytics.int_event_sessions\n    where session_started_at >= current_date - interval '7 days'\n)\nselect activity.active_users, sessions.sessions_7d\nfrom activity cross join sessions",
+          "locator": "candidate=column:active_users:mart_active_users_30d:mart_active_users_7d/side=right",
+          "source": "dbt_sql",
+          "uri": "semantic://column:active_users:mart_active_users_30d:mart_active_users_7d/right"
+        },
+        {
+          "content_hash": "233f0e77cbd70de555a2e22aff71a533d9f4c3afea611252b262dfd9dd2912c5",
+          "excerpt": "select active_users from analytics.mart_active_users_30d",
+          "locator": "dashboard=customer_health/tile=health_active_users",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        },
+        {
+          "content_hash": "5bd43b9c8b39d44a12e818b24876d450089171ac5ee8b36aed87753b0430e19d",
+          "excerpt": "select active_users from analytics.mart_active_users_7d",
+          "locator": "dashboard=product_engagement/tile=product_active_users",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        },
+        {
+          "content_hash": null,
+          "excerpt": "select active_users from analytics.mart_active_users_30d\n-- upstream model mart_active_users_30d\n-- Deliberate D6: 30-day definition.\nselect count(distinct user_id) as active_users\nfrom analytics.int_user_activity\nwhere activity_date >= current_date - interval '30 days'",
+          "locator": "candidate=label:active_users:health_active_users:product_active_users/side=left",
+          "source": "dashboard_metadata",
+          "uri": "semantic://label:active_users:health_active_users:product_active_users/left"
+        },
+        {
+          "content_hash": null,
+          "excerpt": "select active_users from analytics.mart_active_users_7d\n-- upstream model mart_active_users_7d\n-- Deliberate D6: 7-day definition.\nwith activity as (\n    select count(distinct user_id) as active_users\n    from analytics.int_user_activity\n    where activity_date >= current_date - interval '7 days'\n),\nsessions as (\n    select count(*) as sessions_7d\n    from analytics.int_event_sessions\n    where session_started_at >= current_date - interval '7 days'\n)\nselect activity.active_users, sessions.sessions_7d\nfrom activity cross join sessions",
+          "locator": "candidate=label:active_users:health_active_users:product_active_users/side=right",
+          "source": "dashboard_metadata",
+          "uri": "semantic://label:active_users:health_active_users:product_active_users/right"
+        }
+      ],
+      "id": "metric_definition_conflict:active_users:0358097d0ee4",
+      "summary": "Metric 'active_users' has incompatible SQL definitions."
+    },
+    {
+      "asset_ids": [
+        "tile.revenue_executive.rev_exec_total",
+        "tile.revenue_finance.rev_fin_total"
+      ],
+      "confidence": 1.0,
+      "defect_type": "metric_definition_conflict",
+      "detector": "semantic_llm",
+      "evidence": [
+        {
+          "content_hash": "1f6205b68e53da2759a2b109475fd55f5b554546c8d491741b025343144834ea",
+          "excerpt": "select sum(amount) as total_revenue from analytics.fct_orders",
+          "locator": "dashboard=revenue_executive/tile=rev_exec_total",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        },
+        {
+          "content_hash": "584a6e5e32ca8e2395dfc396f531b72846ca503208549b47f63f1014155e5794",
+          "excerpt": "select sum(amount - refunds) as total_revenue from analytics.fct_orders",
+          "locator": "dashboard=revenue_finance/tile=rev_fin_total",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        },
+        {
+          "content_hash": null,
+          "excerpt": "select sum(amount) as total_revenue from analytics.fct_orders\n-- upstream model fct_orders\nselect\n    order_id,\n    user_id,\n    amount,\n    refunds,\n    net_amount,\n    ordered_at,\n    status,\n    channel,\n    region\nfrom analytics.int_order_financials",
+          "locator": "candidate=label:total_revenue:rev_exec_total:rev_fin_total/side=left",
+          "source": "dashboard_metadata",
+          "uri": "semantic://label:total_revenue:rev_exec_total:rev_fin_total/left"
+        },
+        {
+          "content_hash": null,
+          "excerpt": "select sum(amount - refunds) as total_revenue from analytics.fct_orders\n-- upstream model fct_orders\nselect\n    order_id,\n    user_id,\n    amount,\n    refunds,\n    net_amount,\n    ordered_at,\n    status,\n    channel,\n    region\nfrom analytics.int_order_financials",
+          "locator": "candidate=label:total_revenue:rev_exec_total:rev_fin_total/side=right",
+          "source": "dashboard_metadata",
+          "uri": "semantic://label:total_revenue:rev_exec_total:rev_fin_total/right"
+        }
+      ],
+      "id": "metric_definition_conflict:total_revenue:b109d44044af",
+      "summary": "Metric 'total_revenue' has incompatible SQL definitions."
+    },
+    {
+      "asset_ids": [
+        "model.stg_legacy_orders"
+      ],
+      "confidence": 1.0,
+      "defect_type": "orphaned_model",
+      "detector": "deterministic",
+      "evidence": [
+        {
+          "content_hash": "fcaa0065ba71ee5b4bd785981a66637a14eee83ec76ecef4a208cc6cb22089ee",
+          "excerpt": "select legacy_order_id, legacy_customer_id, legacy_total, imported_at\nfrom {{ source('raw', 'legacy_orders') }}",
+          "locator": "model=stg_legacy_orders",
+          "source": "dbt_sql",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dbt_project/models/staging/stg_legacy_orders.sql"
+        }
+      ],
+      "id": "orphaned_model:stg_legacy_orders",
+      "summary": "Model stg_legacy_orders has no downstream model or dashboard tile."
+    },
+    {
+      "asset_ids": [
+        "dashboard.weekly_ops"
+      ],
+      "confidence": 1.0,
+      "defect_type": "stale_asset",
+      "detector": "deterministic",
+      "evidence": [
+        {
+          "content_hash": null,
+          "excerpt": "last_queried_at=2026-03-21T12:00:00+00:00",
+          "locator": "dashboard_id=weekly_ops/max(timestamp)=2026-03-21T12:00:00Z",
+          "source": "query_log",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/query_logs/query_logs.parquet"
+        },
+        {
+          "content_hash": "b710c05dc1fe41535c626c9f4138b34cc3925b3035b239d2248ac314c8a4a8d7",
+          "excerpt": null,
+          "locator": "dashboard=weekly_ops",
+          "source": "dashboard_metadata",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dashboards.json"
+        }
+      ],
+      "id": "stale_asset:weekly_ops",
+      "summary": "Dashboard weekly_ops has been inactive for at least 120 days."
+    },
+    {
+      "asset_ids": [
+        "model.int_order_wide"
+      ],
+      "confidence": 1.0,
+      "defect_type": "unused_column_propagation",
+      "detector": "deterministic",
+      "evidence": [
+        {
+          "content_hash": "7c624b6d09dafac293385613e607894a1234e5d928915b2da17c2160671a283d",
+          "excerpt": "-- Deliberate D7: one key plus 12 propagated columns.\nselect *\nfrom {{ ref('stg_orders') }}",
+          "locator": "model=int_order_wide",
+          "source": "dbt_sql",
+          "uri": "/Users/nayanika/Documents/LineageIQ/synthetic/dbt_project/models/intermediate/int_order_wide.sql"
+        }
+      ],
+      "id": "unused_column_propagation:int_order_wide",
+      "summary": "Model int_order_wide propagates 12 SELECT * columns unused by every dashboard tile: amount, channel, coupon_code, currency, ordered_at, payment_method, refunds, region, shipping_amount, status, tax_amount, user_id."
+    }
+  ],
+  "nodes": [
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.dim_products",
+      "kind": "model",
+      "label": "dim_products",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.dim_users",
+      "kind": "model",
+      "label": "dim_users",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.fct_orders",
+      "kind": "model",
+      "label": "fct_orders",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_campaign_attribution",
+      "kind": "model",
+      "label": "int_campaign_attribution",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_daily_sales",
+      "kind": "model",
+      "label": "int_daily_sales",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_event_sessions",
+      "kind": "model",
+      "label": "int_event_sessions",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_order_financials",
+      "kind": "model",
+      "label": "int_order_financials",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [
+        "unused_column_propagation:int_order_wide"
+      ],
+      "id": "model.int_order_wide",
+      "kind": "model",
+      "label": "int_order_wide",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_product_sales",
+      "kind": "model",
+      "label": "int_product_sales",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_subscription_status",
+      "kind": "model",
+      "label": "int_subscription_status",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_support_metrics",
+      "kind": "model",
+      "label": "int_support_metrics",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_user_activity",
+      "kind": "model",
+      "label": "int_user_activity",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.int_user_orders",
+      "kind": "model",
+      "label": "int_user_orders",
+      "layer": "intermediate"
+    },
+    {
+      "dashboard": null,
+      "findings": [
+        "metric_definition_conflict:active_users:0358097d0ee4"
+      ],
+      "id": "model.mart_active_users_30d",
+      "kind": "model",
+      "label": "mart_active_users_30d",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [
+        "metric_definition_conflict:active_users:0358097d0ee4"
+      ],
+      "id": "model.mart_active_users_7d",
+      "kind": "model",
+      "label": "mart_active_users_7d",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.mart_campaign_roi",
+      "kind": "model",
+      "label": "mart_campaign_roi",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.mart_daily_sales",
+      "kind": "model",
+      "label": "mart_daily_sales",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.mart_product_performance",
+      "kind": "model",
+      "label": "mart_product_performance",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.mart_subscription_health",
+      "kind": "model",
+      "label": "mart_subscription_health",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.mart_support_overview",
+      "kind": "model",
+      "label": "mart_support_overview",
+      "layer": "marts"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_campaigns",
+      "kind": "model",
+      "label": "stg_campaigns",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_events",
+      "kind": "model",
+      "label": "stg_events",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [
+        "orphaned_model:stg_legacy_orders"
+      ],
+      "id": "model.stg_legacy_orders",
+      "kind": "model",
+      "label": "stg_legacy_orders",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_orders",
+      "kind": "model",
+      "label": "stg_orders",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_payments",
+      "kind": "model",
+      "label": "stg_payments",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_products",
+      "kind": "model",
+      "label": "stg_products",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_refunds",
+      "kind": "model",
+      "label": "stg_refunds",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_subscriptions",
+      "kind": "model",
+      "label": "stg_subscriptions",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "model.stg_support_tickets",
+      "kind": "model",
+      "label": "stg_support_tickets",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [
+        "broken_lineage:model.stg_users.email_hash"
+      ],
+      "id": "model.stg_users",
+      "kind": "model",
+      "label": "stg_users",
+      "layer": "staging"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.campaigns",
+      "kind": "source",
+      "label": "raw.campaigns",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.events",
+      "kind": "source",
+      "label": "raw.events",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.legacy_orders",
+      "kind": "source",
+      "label": "raw.legacy_orders",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.orders",
+      "kind": "source",
+      "label": "raw.orders",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.payments",
+      "kind": "source",
+      "label": "raw.payments",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.products",
+      "kind": "source",
+      "label": "raw.products",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.refunds",
+      "kind": "source",
+      "label": "raw.refunds",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.subscriptions",
+      "kind": "source",
+      "label": "raw.subscriptions",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.support_tickets",
+      "kind": "source",
+      "label": "raw.support_tickets",
+      "layer": "source"
+    },
+    {
+      "dashboard": null,
+      "findings": [],
+      "id": "source.raw.users",
+      "kind": "source",
+      "label": "raw.users",
+      "layer": "source"
+    },
+    {
+      "dashboard": "customer_health",
+      "findings": [
+        "metric_definition_conflict:active_users:0358097d0ee4"
+      ],
+      "id": "tile.customer_health.health_active_users",
+      "kind": "tile",
+      "label": "customer_health.health_active_users",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "customer_health",
+      "findings": [],
+      "id": "tile.customer_health.health_subscriptions",
+      "kind": "tile",
+      "label": "customer_health.health_subscriptions",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "executive_orders",
+      "findings": [],
+      "id": "tile.executive_orders.exec_gross_revenue",
+      "kind": "tile",
+      "label": "executive_orders.exec_gross_revenue",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "executive_orders",
+      "findings": [],
+      "id": "tile.executive_orders.exec_order_count",
+      "kind": "tile",
+      "label": "executive_orders.exec_order_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "finance_orders",
+      "findings": [],
+      "id": "tile.finance_orders.fin_net_revenue",
+      "kind": "tile",
+      "label": "finance_orders.fin_net_revenue",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "finance_orders",
+      "findings": [],
+      "id": "tile.finance_orders.fin_order_count",
+      "kind": "tile",
+      "label": "finance_orders.fin_order_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "marketing_overview",
+      "findings": [],
+      "id": "tile.marketing_overview.mkt_campaigns",
+      "kind": "tile",
+      "label": "marketing_overview.mkt_campaigns",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "marketing_overview",
+      "findings": [],
+      "id": "tile.marketing_overview.mkt_channel_mix",
+      "kind": "tile",
+      "label": "marketing_overview.mkt_channel_mix",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "marketing_overview",
+      "findings": [],
+      "id": "tile.marketing_overview.mkt_order_count",
+      "kind": "tile",
+      "label": "marketing_overview.mkt_order_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "marketing_overview",
+      "findings": [],
+      "id": "tile.marketing_overview.mkt_roas",
+      "kind": "tile",
+      "label": "marketing_overview.mkt_roas",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "marketing_overview",
+      "findings": [],
+      "id": "tile.marketing_overview.mkt_spend",
+      "kind": "tile",
+      "label": "marketing_overview.mkt_spend",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "monthly_board",
+      "findings": [],
+      "id": "tile.monthly_board.monthly_subscriptions",
+      "kind": "tile",
+      "label": "monthly_board.monthly_subscriptions",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "product_engagement",
+      "findings": [
+        "metric_definition_conflict:active_users:0358097d0ee4"
+      ],
+      "id": "tile.product_engagement.product_active_users",
+      "kind": "tile",
+      "label": "product_engagement.product_active_users",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "product_engagement",
+      "findings": [],
+      "id": "tile.product_engagement.product_catalog",
+      "kind": "tile",
+      "label": "product_engagement.product_catalog",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "product_engagement",
+      "findings": [],
+      "id": "tile.product_engagement.product_performance",
+      "kind": "tile",
+      "label": "product_engagement.product_performance",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "product_engagement",
+      "findings": [],
+      "id": "tile.product_engagement.product_sessions",
+      "kind": "tile",
+      "label": "product_engagement.product_sessions",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "revenue_executive",
+      "findings": [
+        "metric_definition_conflict:total_revenue:b109d44044af"
+      ],
+      "id": "tile.revenue_executive.rev_exec_total",
+      "kind": "tile",
+      "label": "revenue_executive.rev_exec_total",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "revenue_executive",
+      "findings": [],
+      "id": "tile.revenue_executive.rev_exec_trend",
+      "kind": "tile",
+      "label": "revenue_executive.rev_exec_trend",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "revenue_finance",
+      "findings": [
+        "metric_definition_conflict:total_revenue:b109d44044af"
+      ],
+      "id": "tile.revenue_finance.rev_fin_total",
+      "kind": "tile",
+      "label": "revenue_finance.rev_fin_total",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "revenue_finance",
+      "findings": [],
+      "id": "tile.revenue_finance.rev_fin_trend",
+      "kind": "tile",
+      "label": "revenue_finance.rev_fin_trend",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis.sales_average_order",
+      "kind": "tile",
+      "label": "sales_kpis.sales_average_order",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis.sales_channel_mix",
+      "kind": "tile",
+      "label": "sales_kpis.sales_channel_mix",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis.sales_customer_count",
+      "kind": "tile",
+      "label": "sales_kpis.sales_customer_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis.sales_order_count",
+      "kind": "tile",
+      "label": "sales_kpis.sales_order_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis.sales_total_revenue",
+      "kind": "tile",
+      "label": "sales_kpis.sales_total_revenue",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis_v2",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis_v2.sales_v2_average_order",
+      "kind": "tile",
+      "label": "sales_kpis_v2.sales_v2_average_order",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis_v2",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis_v2.sales_v2_customer_count",
+      "kind": "tile",
+      "label": "sales_kpis_v2.sales_v2_customer_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis_v2",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis_v2.sales_v2_order_count",
+      "kind": "tile",
+      "label": "sales_kpis_v2.sales_v2_order_count",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis_v2",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis_v2.sales_v2_region",
+      "kind": "tile",
+      "label": "sales_kpis_v2.sales_v2_region",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "sales_kpis_v2",
+      "findings": [
+        "duplicate_dashboard:sales_kpis:sales_kpis_v2"
+      ],
+      "id": "tile.sales_kpis_v2.sales_v2_total_revenue",
+      "kind": "tile",
+      "label": "sales_kpis_v2.sales_v2_total_revenue",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "user_privacy_audit",
+      "findings": [
+        "broken_lineage:model.stg_users.email_hash"
+      ],
+      "id": "tile.user_privacy_audit.privacy_email_hash",
+      "kind": "tile",
+      "label": "user_privacy_audit.privacy_email_hash",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "weekly_ops",
+      "findings": [
+        "stale_asset:weekly_ops"
+      ],
+      "id": "tile.weekly_ops.ops_orders",
+      "kind": "tile",
+      "label": "weekly_ops.ops_orders",
+      "layer": "tile"
+    },
+    {
+      "dashboard": "weekly_ops",
+      "findings": [
+        "stale_asset:weekly_ops"
+      ],
+      "id": "tile.weekly_ops.ops_tickets",
+      "kind": "tile",
+      "label": "weekly_ops.ops_tickets",
+      "layer": "tile"
+    }
+  ],
+  "stats": {
+    "coverage_pct": 88.0952380952381,
+    "edge_count": 73,
+    "finding_count": 7,
+    "graph_fingerprint": "74c57581f422fe58fe914fc26a67de54c3043ca00a28e908b150540f3867cee5",
+    "node_count": 73
+  }
+}
